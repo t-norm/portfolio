@@ -30,11 +30,7 @@ function Header() {
   return (
     <div>
       <nav>
-        <div>
-          <a href="/">
-            <span>Tyler Norman</span>
-          </a>
-        </div>
+        <a href="/"><span>Tyler Norman</span></a>
       </nav>
 
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
