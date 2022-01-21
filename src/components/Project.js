@@ -20,7 +20,7 @@ function Project(props) {
           <div>
             {project.description}
             <div>
-              Languages: {project.languages}
+              Made with: {project.tech}
             </div>
             <div>
               <small>
