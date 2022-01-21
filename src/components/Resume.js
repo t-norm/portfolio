@@ -1,13 +1,11 @@
 import React from "react";
+import resume from '../assets/Tyler Norman Resume.pdf';
 
 function Resume() {
   return (
     <div>
-        <p>Resume</p>
-
-        <a href={process.env.PUBLIC_URL + "resume.pdf"}>
-          <span>Download My Resume</span>
-        </a>
+      <p>Resume</p>
+      <iframe width="90%" height="1000px" src={resume} scrolling="no"></iframe>
     </div>
   );
 }
