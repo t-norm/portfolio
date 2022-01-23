@@ -29,11 +29,11 @@ function Header() {
 
   return (
     <div>
-      <nav>
+      <nav className='d-flex mb-3 justify-content-center my-text bg-dark'>
         <a href="/"><span>Tyler Norman</span></a>
+        <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       </nav>
 
-      <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
 
       <main>
         <div>{renderPage(currentPage)}</div>

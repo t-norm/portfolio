@@ -4,9 +4,9 @@ function Navigation(props) {
   const navLinks = ["About", "Portfolio", "Contact", "Resume"];
   return (
     <div>
-      <ul>
+      <ul className="row">
         {navLinks.map((navLink) => (
-          <li key={navLink}>
+          <li key={navLink} className="d-flex col-3">
             <a href={`#${navLink.toLowerCase()}`} onClick={() => props.handlePageChange(navLink)}>{navLink}</a>
           </li>
         ))}

@@ -1,0 +1,16 @@
+.my-text {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.fancy {
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
