@@ -29,14 +29,14 @@ function Header() {
 
   return (
     <div>
-      <nav className='d-flex mb-3 justify-content-center my-text bg-dark'>
-        <a href="/"><span>Tyler Norman</span></a>
+      <nav className='d-flex justify-content-center my-text bg-dark'>
+        <a href="/" className='header'><span>Tyler Norman</span></a>
         <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       </nav>
 
 
       <main>
-        <div>{renderPage(currentPage)}</div>
+        <div className='about-bg'>{renderPage(currentPage)}</div>
       </main>
     </div>
   );

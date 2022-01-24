@@ -1,3 +1,13 @@
+.about-shadow {
+    box-shadow: 15px 0 15px -4px rgba(0, 0, 0, 0.8), -15px 0 8px -4px rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+}
+
+.portrait {
+    max-width: 100%;
+    height: auto;
+}
+
 .my-text {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
@@ -7,10 +17,24 @@
     font-family: 'Sedgwick Ave', cursive;
 }
 
+.header {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.about-bg {
+    background-image: url('../assets/about-bg.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
 }

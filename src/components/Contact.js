@@ -6,7 +6,7 @@ function Contact() {
   const onSubmit = data => console.log(data);
 
   return (
-    <div>
+    <div className='bg-light'>
       <p>Contact</p>
 
       <form onSubmit={handleSubmit(onSubmit)}>

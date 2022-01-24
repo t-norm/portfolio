@@ -1,11 +1,10 @@
 import React from "react";
-import resume from '../assets/Tyler Norman Resume.pdf';
+import resume from '../assets/Resume.pdf';
 
 function Resume() {
   return (
-    <div>
-      <p>Resume</p>
-      <iframe width="90%" height="1000px" src={resume} scrolling="no"></iframe>
+    <div className="bg-light">
+      <iframe width="100%" height="820px" src={resume} ></iframe>
     </div>
   );
 }
