@@ -1,34 +1,59 @@
-import React from 'react';
-import { useForm } from "react-hook-form";
+import React, { useState } from 'react';
+import { validateEmail } from '../utils/helpers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
-  const { register, formState: { errors }, handleSubmit, reset } = useForm();
-  const onSubmit = data => console.log(data);
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [errorMessage, setErrorMessage] = useState('');
+  const { Name, Email, Message } = formState;
+  
+  function handleChange(e) {
+    if (e.target.name === 'Email') {
+      const isValid = validateEmail(e.target.value);
+        if(!isValid) {
+          setErrorMessage('Email invalid');
+        } else {
+          setErrorMessage('');
+        }
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} invalid.`);
+      } else {
+        setErrorMessage('');
+      } 
+    }
+
+    if (!errorMessage) {
+      setFormState({...formState, [e.target.name]: e.target.value })
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   return (
-    <div className='bg-light'>
-      <p>Contact</p>
-
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label>Name: </label>
-          <input type="text" name="name" placeholder='Jane Doe' {...register("name", {required: true, maxLength: 20})} />
-          {errors.name?.type === 'required' && "Name required."}
+    <div className='d-flex justify-content-center bg-light'>
+      <form className='mt-5 p-5 border-start border-end border-3 form-shadow w-75' onSubmit={handleSubmit}>
+        <div className="pb-3">
+          <label className="text-primary form-font" htmlFor="name">Name</label><br></br>
+          <input className="w-100" type="text" name="Name" defaultValue={Name} onBlur={handleChange} />
         </div>
-
-        <div>
-          <label>Email Address: </label>
-          <input type="email" name="email" placeholder='jane@mail.com' {...register("email", {required: true, maxLength: 50, pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})} />
-          {errors.email?.type === 'required' && "Email required."}
+        <div className="pb-3">
+          <label className="text-primary form-font" htmlFor="email">Email Address</label><br></br>
+          <input className="w-100" type="email" name="Email" defaultValue={Email} onBlur={handleChange} />
         </div>
-
-        <div>
-          <label>Message: </label>
-          <textarea type="text" name="message" rows="5" placeholder="Wow! You're so cool, Tyler. We'd love to offer you a job..." {...register("message", {required: true, maxLength: 300})} />
-          {errors.message?.type === 'required' && "Message required."}
+        <div className="pb-3">
+          <label className="text-primary form-font" htmlFor="Message">Message</label><br></br>
+          <textarea className="w-100" name="Message" rows="5" defaultValue={Message} onBlur={handleChange} />
         </div>
-
-        <input type="Submit" />
+        {errorMessage && (
+          <div className='d-flex justify-content-center'>
+            <p className="error"><FontAwesomeIcon icon={faExclamationTriangle} size="sm" />{errorMessage}</p>
+          </div>
+        )}
+        <input className="d-flex justify-content-center btn btn-primary" type="submit"/>
       </form>
     </div>
   );
