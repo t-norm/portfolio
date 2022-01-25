@@ -71,3 +71,7 @@ body {
     border-radius: 50px;
     margin: auto;
 }
+
+.test {
+    color: orange;
+}
