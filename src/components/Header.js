@@ -30,7 +30,7 @@ function Header() {
   return (
     <div>
       <nav className='d-flex justify-content-center my-text bg-dark'>
-        <a href="/portfolio" className='header'><span>Tyler Norman</span></a>
+        <a href="https://t-norm.github.io/portfolio/" className='header'><span>Tyler Norman</span></a>
         <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       </nav>
 
