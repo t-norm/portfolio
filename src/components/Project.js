@@ -1,32 +1,33 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
 function Project(props) {
   return (
-    <div>
+    <div className="row d-flex justify-content-center">
       {props.projects.map((project) => (
-        <div>
-          <div>
-            <div>
-              <p key={project.id}>{project.title}</p>
-            </div>
-          </div>
-
+        <div className="card w-25 m-2 shadow">
           <div>
             <a href={project.live} target="_blank">
-              <img src={process.env.PUBLIC_URL + project.image} alt="project image" />
+              <img className="w-100 d-flex justify-content-center pt-2" src={process.env.PUBLIC_URL + project.image} alt="project image" />
             </a>
           </div>
 
           <div>
-            {project.description}
             <div>
+              <p key={project.id} className="card-title">{project.title}</p>
+            </div>
+          </div>
+
+          <div>
+            {project.description}
+            <div className="border-top">
               Made with: {project.tech}
             </div>
-            <div>
-              <small>
-                <a href={project.repo} target="_blank">Github</a>
-                <a href={project.live} target="_blank">Live Site</a>
-              </small>
+            <div className="d-flex justify-content-center">
+              <a href={project.repo} target="_blank" className="m-3"><FontAwesomeIcon icon={faGithubSquare} size="3x" /></a>
+              <a href={project.live} target="_blank" className="m-3"><FontAwesomeIcon icon={faGlobeAmericas} size="3x" /></a>
             </div>
           </div>
         </div>

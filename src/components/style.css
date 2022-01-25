@@ -1,3 +1,8 @@
+.card-title {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .about-shadow {
     box-shadow: 15px 0 15px -4px rgba(0, 0, 0, 0.8), -15px 0 8px -4px rgba(0, 0, 0, 0.8);
     border-radius: 25px;
