@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';

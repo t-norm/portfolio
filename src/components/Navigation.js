@@ -6,7 +6,7 @@ function Navigation(props) {
     <div>
       <ul className="row">
         {navLinks.map((navLink) => (
-          <li key={navLink} className="d-flex col-3">
+          <li key={navLink} className="d-flex col-3 test">
             <a className="header" href={`#${navLink.toLowerCase()}`} onClick={() => props.handlePageChange(navLink)}>{navLink}</a>
           </li>
         ))}

@@ -1,3 +1,14 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow-x: hidden;
+}
+
 .card-title {
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
@@ -40,14 +51,6 @@
     padding: 10px;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
 .about-bg {
     background-image: url('../assets/about-bg.png');
     background-repeat: no-repeat;
@@ -58,5 +61,13 @@
 .error {
     color: red;
     font-weight: bold;
+    margin: auto;
+}
+
+.footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    max-width: 40%;
+    border-radius: 50px;
     margin: auto;
 }
