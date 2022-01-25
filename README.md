@@ -9,6 +9,8 @@
     <img src="https://img.shields.io/badge/Made%20With-React-blue?style=plastic" />
 </p>
 
+<a href="https://t-norm.github.io/portfolio/" target="_lank">See my portfolio here!</a>
+
 ![alt text](./public/img/demo.png)
 
 # Description:
@@ -25,6 +27,7 @@ My MERN Stack/Web Dev. portfolio
 
 # Installation:
 N/A
+Site live at: https://t-norm.github.io/portfolio/
 
 # Usage:
 Used to showcase my web dev. abilities
