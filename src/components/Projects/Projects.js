@@ -3,12 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import pawgers from "../../Assets/Projects/pawgers.png";
-import stream from "../../Assets/Projects/streamability.png";
-import blog from "../../Assets/Projects/blog.png";
-import socialAPI from "../../Assets/Projects/socialAPI.png";
-import food from "../../Assets/Projects/food.png";
-import weather from "../../Assets/Projects/weather.png";
+import pawgers from "../../assets/Projects/pawgers.png";
+import stream from "../../assets/Projects/streamability.png";
+import blog from "../../assets/Projects/blog.png";
+import socialAPI from "../../assets/Projects/socialAPI.png";
+import food from "../../assets/Projects/food.png";
+import weather from "../../assets/Projects/weather.png";
 
 function Projects() {
   return (
