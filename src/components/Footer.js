@@ -1,19 +1,56 @@
 import React from "react";
-import "./style.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiFillGithub,
+  AiFillInstagram
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
+  let date = new Date();
+  let year = date.getFullYear();
   return (
-    <footer className="mt-2 bg-dark footer d-flex justify-content-center">
-      <div className="m-auto">
-        <a href="https://github.com/t-norm?tab=repositories" target="_blank" className="p-1"><FontAwesomeIcon icon={faGithubSquare} size="3x" /></a>
-        <a href="https://www.linkedin.com/in/tyler-norman-952a9a219/" target="_blank" className="p-1"><FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
-        <a href="https://www.instagram.com/tentacle_lad/" target="_blank" className="p-1"><FontAwesomeIcon icon={faInstagramSquare} size="3x" /></a>
-      </div>
-    </footer>
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Copyright © {year}</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/t-norm?tab=repositories"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/tyler-norman-952a9a219/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.instagram.com/tentacle_lad/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
