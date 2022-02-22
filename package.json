@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "description": "My MERN Stack/Web Dev. portfolio",
   "private": true,
   "homepage": "https://t-norm.github.io/portfolio",
   "dependencies": {
