@@ -24,7 +24,7 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillGithub />
+                <AiFillGithub size={30}/>
               </a>
             </li>
             <li className="social-icons">
@@ -34,7 +34,7 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn size={30}/>
               </a>
             </li>
             <li className="social-icons">
@@ -44,10 +44,13 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiFillInstagram size={30}/>
               </a>
             </li>
           </ul>
+        </Col>
+        <Col md="4">
+          <a href="mailto:tnorman600@gmail.com">e: tnorman600@gmail.com</a>
         </Col>
       </Row>
     </Container>

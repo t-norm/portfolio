@@ -46,7 +46,7 @@ function NavBar() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillGithub />
+                <AiFillGithub size={30}/>
               </a>
             </li>
             <li className="social-icons">
@@ -56,7 +56,7 @@ function NavBar() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn size={30}/>
               </a>
             </li>
             <li className="social-icons">
@@ -66,7 +66,7 @@ function NavBar() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiFillInstagram size={30}/>
               </a>
             </li>
           </ul>
